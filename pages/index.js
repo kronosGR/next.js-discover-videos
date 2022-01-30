@@ -15,7 +15,7 @@ export default function Home() {
       <h1>KronosFlix</h1>
 
       {/* <NavBar /> */}
-      <Banner />
+      <Banner title='Clifford the green dog' subTitle='a cute dog' imgUrl='/static/clifford.webp' />
 
       {/* <Card /> */}
     </div>

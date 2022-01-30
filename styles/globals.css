@@ -2,9 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
+  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--black40);
   color: white;
   overflow-x: hidden;
@@ -64,6 +63,7 @@ button {
   margin: 0;
   border: 0px;
   outline: 0px;
+  color: var(--white);
 }
 
 :root {
@@ -85,8 +85,7 @@ button {
   --green10: rgba(110, 231, 183, 1);
   --shadow10: rgba(0, 0, 0, 0.3);
   --shadow20: rgba(158, 155, 155, 0.3);
-  --shadow30: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow30: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   --red: rgb(220, 38, 38);
   --red10: rgba(185, 28, 28, 1);
