@@ -2,6 +2,7 @@ import styles from './navbar.module.css';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const NavBar = (props) => {
   const { username } = props;
@@ -20,16 +21,18 @@ const NavBar = (props) => {
     router.push('/browser/my-list');
   };
 
-  const handleShowDropdown =(e) => {
+  const handleShowDropdown = (e) => {
     e.preventDefault();
-    setShowDropdown(!showDropdown)
-  }
+    setShowDropdown(!showDropdown);
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <a className={styles.logoLink} href='/'>
-          <div className={styles.logoWrapper}>KronosFlix</div>
+          <div className={styles.logoWrapper}>
+            <Image src={'/static/netflix.svg'} alt='Logo' width={128} height={34} />
+          </div>
         </a>
         <ul className={styles.navItems}>
           <li className={styles.navItem} onClick={handleOnClickHome}>
@@ -43,6 +46,8 @@ const NavBar = (props) => {
           <div>
             <button className={styles.usernameBtn} onClick={handleShowDropdown}>
               <p className={styles.username}>{username}</p>
+
+              <Image src={'/static/expand_more.svg'} alt='Expand dropdown' width={24} height={24} />
             </button>
 
             {showDropdown && (
