@@ -13,8 +13,6 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <h1>KronosFlix</h1>
-
       <NavBar username="Kronos@gmail.com" />
       <Banner title='Clifford the green dog' subTitle='a cute dog' imgUrl='/static/clifford.webp' />
 
