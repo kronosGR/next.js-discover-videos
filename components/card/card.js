@@ -4,9 +4,12 @@ import { useState } from 'react';
 import styles from './card.module.css';
 
 const Card = (props) => {
-  const { imgUrl="/static/cliffor.webp", size = 'medium' } = props;
+  const {
+    imgUrl = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    size = 'medium',
+  } = props;
 
-  const [imgSrc, setImgSrc] = useState(imgUrl)
+  const [imgSrc, setImgSrc] = useState(imgUrl);
 
   const classMap = {
     large: styles.lgItem,
@@ -14,9 +17,11 @@ const Card = (props) => {
     small: styles.smItem,
   };
 
-  const handleOnError=()=>{
-    setImgSrc('/static/cliffor.webp')
-  }
+  const handleOnError = () => {
+    setImgSrc(
+      'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+    );
+  };
 
   return (
     <div className={styles.container}>
