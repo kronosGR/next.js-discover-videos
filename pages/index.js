@@ -7,6 +7,20 @@ import styles from '../styles/Home.module.css';
 import SectionCards from '../components/card/section-cards';
 
 export default function Home() {
+  const disneyVideos = [
+    {
+      imgUrl:"/static/clifford.webp"
+    },
+    {
+      imgUrl:"/static/clifford.webp"
+    },
+    {
+      imgUrl:"/static/clifford.webp"
+    },
+    {
+      imgUrl:"/static/clifford.webp"
+    },
+  ]
   return (
     <div className={styles.container}>
       <Head>
@@ -22,11 +36,10 @@ export default function Home() {
         imgUrl='/static/clifford.webp'
       />
 
-      <SectionCards title='disney' />
-
-      <Card imgUrl='/static/clifford.webp' size='large' />
-      <Card imgUrl='/static/clifford.web' size='medium' />
-      <Card imgUrl='/static/clifford.webp' size='small' />
+      <div className={styles.sectionWrapper}>
+        <SectionCards title='disney' videos={disneyVideos} size='large'/>
+        <SectionCards title='disney' videos={disneyVideos} size='medium' />
+      </div>
     </div>
   );
 }
